@@ -1,0 +1,10 @@
+@{ ViewData["Title"] = "Sprint Tasks"; }
+<h1>Sprint Tasks</h1>
+<p class="lead">Choose a view to explore:</p>
+<div class="task-grid">
+    <a class="task-card" asp-action="Greetings"><strong>Greetings</strong><span>Date and time based greeting</span></a>
+    <a class="task-card" asp-action="ProductInfo"><strong>Product Info</strong><span>Products rendered from a Razor loop</span></a>
+    <a class="task-card" asp-action="SuperMarkets"><strong>SuperMarkets</strong><span>ViewBag collection and quantity</span></a>
+    <a class="task-card" asp-action="ShoppingList"><strong>Shopping List</strong><span>Dictionary model and partial view</span></a>
+    <a class="task-card" asp-action="ShoppingCart"><strong>Shopping Cart</strong><span>HTML helpers and order form</span></a>
+</div>

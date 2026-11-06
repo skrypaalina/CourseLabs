@@ -1,0 +1,63 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body { background: #f5f7fb; color: #182438; font-family: 'DM Sans', sans-serif; }
+.topbar { background: #fff; border-bottom: 1px solid #e5eaf1; }
+.nav-inner { min-height: 70px; display: flex; align-items: center; justify-content: space-between; }
+.brand { color: #16263c; text-decoration: none; font: 800 19px Manrope, sans-serif; }
+.sprint-link { background: #142d50; border-radius: 7px; color: #fff; text-decoration: none; padding: 11px 17px; font-weight: 700; }
+.sprint-link:hover { background: #234875; color: #fff; }
+.sprint-link span { margin-left: 12px; color: #8ebcff; }
+main.container { max-width: 1000px; min-height: calc(100vh - 150px); padding-top: 56px; padding-bottom: 60px; }
+h1, h2 { font-family: Manrope, sans-serif; font-weight: 800; letter-spacing: -.04em; }
+h1 { margin-bottom: 24px; font-size: clamp(34px, 5vw, 48px); }
+.hero { max-width: 700px; margin: 65px auto; padding: 56px; background: white; border: 1px solid #e6ebf2; border-radius: 20px; box-shadow: 0 18px 50px #152d5010; }
+.hero h1 { margin: 12px 0 15px; }
+.hero > p:not(.eyebrow) { color: #607087; font-size: 18px; margin-bottom: 27px; }
+.eyebrow { color: #466b9d; font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.button { display: inline-block; border: 0; border-radius: 7px; background: #18385f; color: white; text-decoration: none; padding: 12px 20px; font-weight: 700; cursor: pointer; }
+.button:hover { background: #27568d; color: #fff; }
+.lead { color: #64738a; font-size: 18px; margin-bottom: 28px; }
+.task-grid, .product-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.task-card, .product-card, .panel { border: 1px solid #e4eaf2; background: white; border-radius: 12px; padding: 22px; }
+.task-card { display: grid; gap: 7px; color: #182438; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+.task-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px #18385f14; color: #234f84; }
+.task-card strong { font: 700 18px Manrope, sans-serif; }
+.task-card span, .product-card p { color: #6c7a90; }
+.product-card h2 { font-size: 20px; }
+.product-card p { margin: 0; font-size: 20px; font-weight: 700; }
+.market-list { max-width: 500px; background: white; border: 1px solid #e4eaf2; border-radius: 12px; padding: 10px 25px 10px 50px; }
+.market-list li { padding: 12px; border-bottom: 1px solid #edf0f5; }
+.market-list li:last-child { border: 0; }
+.shopping-list { list-style: none; padding: 0; margin: 0; max-width: 540px; }
+.shopping-list li { display: flex; justify-content: space-between; padding: 12px 3px; border-bottom: 1px solid #edf0f5; }
+.shopping-list li:last-child { border: 0; }
+.note { margin-top: 16px; color: #466b9d; }
+.greeting { font: 700 23px Manrope, sans-serif; color: #244c7b; }
+.order-form { max-width: 580px; display: grid; gap: 18px; background: white; border: 1px solid #e4eaf2; border-radius: 14px; padding: 28px; }
+.field { display: grid; gap: 7px; margin: 0; }
+.field label, legend { font-weight: 700; color: #34445b; }
+.choice { display: flex; gap: 8px; align-items: center; font-weight: 500 !important; }
+.footer { border-top: 1px solid #e5eaf1; color: #7b8799; padding: 18px 0; font-size: 13px; }
+@media (max-width: 600px) { .hero { margin: 20px auto; padding: 30px 24px; } main.container { padding-top: 35px; } }
