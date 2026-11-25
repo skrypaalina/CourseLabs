@@ -1,0 +1,12 @@
+@model ViewsPractice.Models.ShoppingCartViewModel
+@{ ViewData["Title"] = "Shopping Cart"; }
+<h1>Shopping Cart</h1>
+<form asp-action="ShoppingCart" method="post" class="order-form">
+    @Html.AntiForgeryToken()
+    <div class="field"><label asp-for="CustomerName">Your name</label>@Html.TextBoxFor(m => m.CustomerName, new { @class = "form-control", placeholder = "Name", required = "required" })</div>
+    <div class="field"><label asp-for="Address">Delivery address</label>@Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Street and number", required = "required" })</div>
+    <div class="field"><label asp-for="Supermarket">Supermarket</label>@Html.DropDownListFor(m => m.Supermarket, Model.Supermarkets, "Choose a supermarket", new { @class = "form-select", required = "required" })</div>
+    <fieldset class="field"><legend>Delivery date</legend>@foreach (var date in Model.DeliveryDates) { <label class="choice">@Html.RadioButtonFor(m => m.DeliveryDate, date) @date</label> }</fieldset>
+    <div class="field"><label asp-for="SelectedProducts">Products</label>@Html.ListBoxFor(m => m.SelectedProducts, Model.Products, new { @class = "form-select", size = 4 })</div>
+    <input class="button" type="submit" value="Place order" />
+</form>

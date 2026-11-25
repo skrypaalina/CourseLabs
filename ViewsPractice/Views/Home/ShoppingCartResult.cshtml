@@ -1,0 +1,4 @@
+@model ViewsPractice.Models.ShoppingCartViewModel
+@{ ViewData["Title"] = "Order received"; }
+<h1>Order received</h1>
+<div class="panel"><p class="greeting">@ViewBag.OrderMessage</p><p>We will deliver to @Model.Address.</p><a asp-action="ShoppingCart">Place another order</a></div>

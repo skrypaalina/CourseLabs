@@ -1,0 +1,6 @@
+@model ViewsPractice.Models.Product
+@{ ViewData["Title"] = "Delete product"; }
+<p class="eyebrow">Catalog</p><h1>Delete product?</h1>
+<section class="panel"><p>Are you sure you want to delete <strong>@Model.Name</strong>?</p><p>This action cannot be undone.</p>
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post" class="page-actions"><button class="button danger-button" type="submit">Delete product</button><a asp-action="Details" asp-route-id="@Model.Id">Cancel</a></form>
+</section>

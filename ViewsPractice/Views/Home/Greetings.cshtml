@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Greetings";
+    var morningMessage = "Good morning! Have a wonderful day.";
+    var eveningMessage = "Good evening! Hope you had a great day.";
+    var now = DateTime.Now;
+    var greeting = now.Hour < 12 ? morningMessage : eveningMessage;
+}
+<h1>Greetings</h1>
+<div class="panel"><p class="greeting">@greeting</p><p>Today is @now.ToString("dddd, MMMM d, yyyy")</p><p>Current time: @now.ToString("HH:mm:ss")</p><p>Tomorrow: @now.AddDays(1).ToString("dddd, MMMM d")</p></div>

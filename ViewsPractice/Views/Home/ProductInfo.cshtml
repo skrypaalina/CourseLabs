@@ -1,0 +1,18 @@
+@using ViewsPractice.Models
+@{
+    ViewData["Title"] = "Product Info";
+    var products = new List<Product>
+    {
+        new() { Name = "Coffee", Price = 8.49 },
+        new() { Name = "Tea", Price = 4.25 },
+        new() { Name = "Chocolate", Price = 3.79 },
+        new() { Name = "Honey", Price = 6.10 }
+    };
+}
+<h1>Product Info</h1>
+<div class="product-list">
+@foreach (var product in products)
+{
+    <article class="product-card"><h2>@product.Name</h2><p>$@product.Price.ToString("0.00")</p></article>
+}
+</div>
