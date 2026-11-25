@@ -1,0 +1,13 @@
+@model Product
+@{ ViewData["Title"] = "Edit product"; }
+<p class="eyebrow">Catalog · Product #@Model.Id</p><h1>Edit @Model.Name</h1>
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post" class="form-card">
+    <input asp-for="Id" type="hidden" />
+    <div asp-validation-summary="ModelOnly" class="validation-message"></div>
+    <div class="field"><label asp-for="Name"></label><input asp-for="Name" /><span asp-validation-for="Name" class="validation-message"></span></div>
+    <div class="field"><label asp-for="Category"></label><input asp-for="Category" /><span asp-validation-for="Category" class="validation-message"></span></div>
+    <div class="field"><label asp-for="Price"></label><input asp-for="Price" type="number" min="0" max="100000" step="0.01" /><span asp-validation-for="Price" class="validation-message"></span></div>
+    <div class="field"><label asp-for="Description"></label><textarea asp-for="Description" rows="3"></textarea><span asp-validation-for="Description" class="validation-message"></span></div>
+    <div class="field"><label asp-for="Type"></label><select asp-for="Type" asp-items="Html.GetEnumSelectList<ProductType>()"></select><span asp-validation-for="Type" class="validation-message"></span></div>
+    <div class="page-actions"><button class="button" type="submit">Save changes</button><a asp-action="Details" asp-route-id="@Model.Id">Cancel</a></div>
+</form>

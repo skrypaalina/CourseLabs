@@ -1,0 +1,10 @@
+@model User
+@{ ViewData["Title"] = "Add user"; }
+<p class="eyebrow">Administration</p><h1>Add user</h1>
+<p class="lead">User details are read from the query string and cannot be edited here.</p>
+<form asp-action="Create" method="get" class="form-card">
+    <div asp-validation-summary="ModelOnly" class="validation-message"></div>
+    <div class="field"><label asp-for="Name"></label><input asp-for="Name" readonly /><span asp-validation-for="Name" class="validation-message"></span></div>
+    <div class="field"><label asp-for="Email"></label><input asp-for="Email" readonly /><span asp-validation-for="Email" class="validation-message"></span></div>
+    <div class="page-actions"><button class="button" type="submit" name="save" value="true">Save user</button><a asp-action="Index">Cancel</a></div>
+</form>

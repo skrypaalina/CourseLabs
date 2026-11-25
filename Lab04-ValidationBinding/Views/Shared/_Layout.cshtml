@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] · Lab 3 Products</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="topbar"><a class="brand" asp-controller="Products" asp-action="Index">Lab 3 <span>Products</span></a><a class="nav-link" asp-controller="Products" asp-action="Index">All products</a></header>
+    <main class="container">@RenderBody()</main>
+    <footer class="footer">ASP.NET Core MVC · Laboratory work 3</footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

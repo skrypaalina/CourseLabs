@@ -1,0 +1,5 @@
+@model Product
+@{ ViewData["Title"] = Model.Name; }
+<p class="eyebrow">Product details</p><h1>@Model.Name</h1>
+<section class="panel"><dl><dt>Category</dt><dd>@Model.Category</dd><dt>Type</dt><dd>@Model.Type</dd><dt>Price</dt><dd>$@Model.Price.ToString("0.00")</dd><dt>Description</dt><dd>@(string.IsNullOrWhiteSpace(Model.Description) ? "No description provided." : Model.Description)</dd></dl></section>
+<div class="page-actions"><a class="button" asp-action="Edit" asp-route-id="@Model.Id">Edit product</a><a asp-action="Index">Back to products</a></div>

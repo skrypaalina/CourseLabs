@@ -1,0 +1,18 @@
+@model BulkPriceUpdateViewModel
+@{ ViewData["Title"] = "Edit prices"; }
+<p class="eyebrow">Bulk edit · @Model.Category</p><h1>Edit prices</h1>
+<p class="lead">Change prices for all products in this category. IDs and names are read-only.</p>
+<form asp-action="EditPrices" asp-route-category="@Model.Category" method="post" class="bulk-form">
+    <div asp-validation-summary="All" class="validation-message"></div>
+    <div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Price</th></tr></thead><tbody>
+    @for (var i = 0; i < Model.Products.Count; i++)
+    {
+        <tr>
+            <td><input asp-for="Products[i].Id" class="readonly-cell" readonly /></td>
+            <td><input asp-for="Products[i].Name" class="readonly-cell name-cell" readonly /></td>
+            <td><input asp-for="Products[i].Price" type="number" min="0" max="100000" step="0.01" /><span asp-validation-for="Products[i].Price" class="validation-message"></span></td>
+        </tr>
+    }
+    </tbody></table></div>
+    <div class="page-actions"><button class="button" type="submit">Save prices</button><a asp-action="Index">Cancel</a></div>
+</form>

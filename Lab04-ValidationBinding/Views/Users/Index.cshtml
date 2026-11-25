@@ -1,0 +1,6 @@
+@model IReadOnlyList<User>
+@{ ViewData["Title"] = "Users"; }
+<div class="page-heading"><div><p class="eyebrow">Administration</p><h1>Users</h1></div><a class="button" asp-action="Create" asp-route-name="New User" asp-route-email="new.user@example.com">Add user</a></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead><tbody>
+@foreach (var user in Model) { <tr><td>@user.Id</td><td><a asp-action="Details" asp-route-id="@user.Id">@user.Name</a></td><td>@user.Email</td></tr> }
+</tbody></table></div>

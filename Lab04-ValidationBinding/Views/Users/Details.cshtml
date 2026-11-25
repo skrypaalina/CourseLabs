@@ -1,0 +1,5 @@
+@model User
+@{ ViewData["Title"] = "User details"; }
+<p class="eyebrow">User #@Model.Id</p><h1>@Model.Name</h1>
+<section class="panel"><dl><dt>Email</dt><dd>@Model.Email</dd></dl></section>
+<div class="page-actions"><a asp-action="Index">Back to users</a></div>
