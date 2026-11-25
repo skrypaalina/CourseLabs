@@ -1,0 +1,4 @@
+@model IReadOnlyList<string>
+@{ ViewData["Title"] = "Users"; }
+<p class="eyebrow">Administration</p><h1>Users</h1>
+<section class="panel"><ul>@foreach (var user in Model) { <li>@user</li> }</ul></section>
